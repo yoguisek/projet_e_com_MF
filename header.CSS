@@ -1,0 +1,53 @@
+/*COULEUR*/
+body {
+    background-color: #F7ECDE;
+}
+
+header {
+    background-color: #E9DAC1;
+    padding: 1em;
+}
+
+
+li {
+    list-style: none;
+    padding-inline: 1%;
+}
+
+* {
+    margin: 0%;
+}
+
+h1 {
+    font-size: large;
+    text-indent: 2em;
+    margin-top: 1rem;
+}
+
+
+@media screen and (max-width:500px) {
+
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header div {
+        width: 8em;
+        justify-content: space-evenly;
+    }
+
+    ul {
+        justify-content: space-between;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    path {
+        fill: rgb(152, 150, 150);
+    }
+}
