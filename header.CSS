@@ -25,51 +25,136 @@ h1 {
 }
 
 svg {
-        width: 18px;
-        height: 18px;
-    }
+    width: 18px;
+    height: 18px;
+}
 
 .row {
-        display: flex;
-        flex-direction: row;
-    }
+    display: flex;
+    flex-direction: row;
+}
 
-    header div {
-        width: 8em;
-        justify-content: space-evenly;
-    }
+header div {
+    width: 8em;
+    justify-content: space-evenly;
+}
 
-@media screen and (max-width:500px) {
-    }
+@media screen and (max-width:500px) {}
 
-    ul {
-        justify-content: space-between;
-    }
-
-    
-
-    path {
-        fill: rgb(152, 150, 150);
-    }
-
-/*Card*/
-#card_id{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-    margin: 0 auto;
-    width: 30%;
-    height: 350px;
-border-radius: 23px;
-background: rgb(9,9,121);
-background: linear-gradient(180deg, rgba(9,9,121,1) 5%, rgba(18,192,227,1) 43%, rgba(255,255,255,1) 100%);
-box-shadow:  -9px 9px 18px #4fafae,
-             9px -9px 18px #59c5c4;
+ul {
+    justify-content: space-between;
 }
 
 
-/*
+
+path {
+    fill: rgb(152, 150, 150);
+}
+
+/*Card*/
+
+.container {
+    display: flex;
+}
+
+.card {
+    background: linear-gradient(170deg, #72B2E4, #92E1E2);
+    border-radius: 24px;
+    padding: 16px;
+    overflow: hidden;
+    transform: translate(0);
+    margin: 16px;
+    transition: 0.25s;
+}
+
+card:hover {
+    transform: scale(1.03);
+}
+
+card::before {
+    content: "";
+    position: absolute;
+    top: -64px;
+    left: -64px;
+    width: 150%;
+    height: 76%;
+    transform: rotate(-12deg);
+    z-index: -1;
+}
+
+.card.card-yellow::before {
+    background: linear-gradient(170deg, #d97904, #f2b705);
+}
+
+.card .logo {
+    height: 24px;
+    padding: 8px;
+}
+
+.card h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 54px;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.card .product {
+    height: 180px;
+    width: 300px;
+    object-fit: contain;
+    visibility: hidden;
+    transform: rotate(-35deg);
+    margin-top: -42px;
+    margin-left: -32px;
+    margin-right: 24px;
+}
+
+.card .price {
+    text-align: right;
+    margin-top: -24px;
+    background: #ffffff;
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 5px;
+}
+
+.card .price h6 {
+    color: #a3a3a3;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.card .price h4 {
+    font-size: 24px;
+    color: #d97904;
+}
+
+.card.card-yellow .price h4 {
+    color: linear-gradient(170deg, #d97904, #f2b705);
+}
+
+.button-right {
+    text-align: right;
+    margin-top: 64px;
+}
+
+button {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 8px 32px;
+    border: none;
+    border-radius: 48px;
+    cursor: pointer;
+}
+
+.card.card-yellow button {
+    background: linear-gradient(170deg, #d97904, #d2b705);
+}
+
+/*  pour pallette de couleur
 
 background: linear-gradient(145deg, #5ac7c6, #4ca7a7);
 
