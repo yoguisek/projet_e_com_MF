@@ -1,29 +1,62 @@
+* {
+    margin: 0%;
+}
+.mar1{margin-top:3rem;}
+.mar2{margin:2rem;}
+.marg-2{margin-inline:-2rem;}
+.container{display:flex;}
+.direction{display:flex;flex-direction:row;}
+.card{background:linear-gradient(170deg,#ffffff,#ffffff);border-radius:24px;padding:24px;overflow:hidden;transform:translate(0);margin:16px;transition:0.25s;}
+
+.card:hover{transform:scale(1.03);}
+.card::before{content:"";position:absolute;top:-64px;left:-64px;width:150%;height:76%;transform:rotate(-12deg);z-index:-1;}
+
+.card.card-yellow::before{background:linear-gradient(170deg, #ffffff,#f2b705);}
+.card .logo{height:24px;padding:8px;}
+.card h2{font-size:40px;
+text-transform:uppercase;line-height:54px;color:#ffffff;margin:0;margin-top:20px;}
+
+.card .product{height:180px;width:300px;object-fit:contain;visibility:hidden;transform:rotate(-35deg);margin-top:-42px;margin-left:-32px;margin-right:24px;}
+
+.card .price{text-align:right;margin-top:-24px;background:#ffffff;height:fit-content;border-radius:1rem;padding:5px;}
+.card .price h6{color:#a3a3a3;font-size:12px;text-decoration:line-through;}
+.card .price h4{fonte-size:24px;color:#d97904;}
+.card.card-yellow .price h4{color:linear-gradient(170deg,#d97904,#f2b705);}
+
+.button-right{text-align:right;margin-top:64px;}
+button{font-size:16px;text-transform:uppercase;color:#ffffff;padding:8px 32px;border:none;border-radius:48px;cursor:pointer;}
+
+.card.card-yellow button{background:linear-gradient(170deg,#d97904,#d2b705);}
+
 /*COULEUR*/
 body {
     background-color: #F7ECDE;
 }
+h5{font-family:'Alfa Slab One', cursive;font-size:26px;color:#fcff4c;-webkit-text-stroke: 1px black;}
 
-header {
+
+header {box-shadow:  10px -10px 7px #d5d5d5,
+             -10px 10px 7px #ebebeb;
+  position:sticky;
+  top:0px;
     background-color: #E9DAC1;
     padding: 1em;
+  z-index:1;
 }
 
 
 li {
     list-style: none;
     padding-inline: 1%;
+  margin-top:8px;
 }
 
-* {
-    margin: 0%;
-}
+
 
 h1 {
     font-size: large;
-    text-indent: 2em;
-    margin-top: 1rem;
 }
-
+.padding{padding:4rem;}
 svg {
     width: 18px;
     height: 18px;
@@ -38,12 +71,13 @@ header div {
     width: 8em;
     justify-content: space-evenly;
 }
+header ul {
+    justify-content: space-between;
+}
 
 @media screen and (max-width:500px) {}
 
-ul {
-    justify-content: space-between;
-}
+
 
 
 
@@ -153,10 +187,31 @@ button {
 .card.card-yellow button {
     background: linear-gradient(170deg, #d97904, #d2b705);
 }
+#card_id{width:80%;padding:3rem;margin}
+
+/*foooter*/
+h7{font-family:'Alfa Slab One';white-space:none;font-size:3rem;color:#fcff4c;-webkit-text-stroke: 2px black;}
+
+
+.logo-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+.line {
+    width: 40%;
+    height: 1px;
+    background: black;
+}
+ul{width:100%;display:flex;flex-direction:column;}
+li{align-self:center;}
+ul .row{flex-direction:row;}
 
 /*  pour pallette de couleur
 
 background: linear-gradient(145deg, #5ac7c6, #4ca7a7);
+background:linear-gradient(180deg,#bababa,#ffffff);
 
 background: rgb(90,199,198);
 background: linear-gradient(245deg, rgba(90,199,198,1) 19%, rgba(18,192,227,1) 43%, rgba(255,255,255,1) 100%);*/
